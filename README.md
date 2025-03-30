@@ -7,6 +7,7 @@
 En este repositorio, los estudiantes implementarán una aplicación práctica de visión computacional, combinando al menos cinco de los temas vistos en clase, mediante un pipeline completo de procesamiento de imágenes y aprendizaje automático.
 
 Cada equipo definirá un caso de uso realista (por ejemplo, detección de plagas, madurez de frutas, defectos en manufactura, segmentación de color, entre otros), recopilará o seleccionará imágenes relevantes, y desarrollará un sistema funcional que clasifique, segmente o analice dichas imágenes.
+
 ---
 
 ## 📋 Instrucciones de Entrega  
