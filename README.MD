@@ -63,4 +63,7 @@ se han utilizado las siguientes librerías:
    - Segmentación o clustering con KMeans y MiniBatchKMeans.  
    - Evaluación con métricas como homogeneity_score, adjusted_rand_score.
 
+## Creditos
+
+Este proyecto fue realizado por Johan Santiago Caro Valencia y Juan Sebastian Rodriguez Salazar
 
