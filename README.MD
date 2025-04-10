@@ -12,8 +12,9 @@ A través del notebook se muestra el flujo completo de un proyecto de visión po
 4. **Ecualización de Histogramas**: mejora de contraste y/o iluminación en las imágenes.  
 5. **Feature Detection y Descriptores (SIFT)**: extracción de puntos clave relevantes en las imágenes.  
 6. **Bag of Visual Words (BoVW) o VLAD**: construcción de un “vocabulario visual” a partir de descriptores para usar con clasificadores.  
-7. **Machine Learning Pipeline en Scikit-Learn**: entrenamiento de diversos clasificadores (SVM, RandomForest, DecisionTree, XGBoost, KNN, etc.) con búsqueda de hiperparámetros.  
-8. **Aprendizaje no supervisado**: uso de KMeans o MiniBatchKMeans para segmentación de color, agrupamiento o etiquetado automático de texturas.
+7. **Machine Learning Pipeline en Scikit-Learn**: entrenamiento de diversos clasificadores (SVM, RandomForest, DecisionTree, XGBoost, KNN, etc.)
+8. **Optimizacion de hiperparámetros**: se hizo busqueda de hiperparametros para encontrar los que maximizan la calidad del modelo
+9. **Aprendizaje no supervisado**: uso de KMeans o MiniBatchKMeans para segmentación de color, agrupamiento o etiquetado automático de texturas.
 
 ## 🛠️ Librerías Principales
 
