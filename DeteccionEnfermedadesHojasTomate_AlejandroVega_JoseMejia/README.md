@@ -51,8 +51,8 @@ Estos resultados reflejan que el preprocesamiento aplicado (aumento, filtros, ca
 
 ## Dataset y Recursos
 
-- 📂 **Dataset**: [Tomato Leaf Disease Detection (Kaggle)](https://www.kaggle.com/datasets/kaustubhb999/tomatoleaf)
-- 📚 **Librerías principales**:
+- **Dataset**: [Tomato Leaf Disease Detection (Kaggle)](https://www.kaggle.com/datasets/kaustubhb999/tomatoleaf)
+- **Librerías principales**:
   - `OpenCV`
   - `imgaug`
   - `scikit-learn`
