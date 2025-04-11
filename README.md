@@ -7,6 +7,7 @@
 En este repositorio, los estudiantes implementarán una aplicación práctica de visión computacional, combinando al menos cinco de los temas vistos en clase, mediante un pipeline completo de procesamiento de imágenes y aprendizaje automático.
 
 Cada equipo definirá un caso de uso realista (por ejemplo, detección de plagas, madurez de frutas, defectos en manufactura, segmentación de color, entre otros), recopilará o seleccionará imágenes relevantes, y desarrollará un sistema funcional que clasifique, segmente o analice dichas imágenes.
+
 ---
 
 ## 📋 Instrucciones de Entrega  
@@ -15,8 +16,8 @@ Cada equipo definirá un caso de uso realista (por ejemplo, detección de plagas
 Cada grupo debe clonar este repositorio en su máquina local:  
 
 ```bash 
-git clone https://github.com/tu_usuario/reconstruccion-3d-sfm.git
-cd reconstruccion-3d-sfm
+git clone https://github.com/adgodoyo/Classic_Computer_Vision.git
+cd Classic_Computer_Vision
 ```
 
 ### **2️⃣ Crear una Nueva Rama**  
@@ -34,17 +35,17 @@ git push origin grupo1_juan_maria
 
 Cada equipo debe organizar su entrega con la siguiente estructura:  
 
-📌 **Formato:** `Integrante1_Integrante2/`  
+📌 **Formato:** `Objetivo_Prototipo_Integrante1_Integrante2/`  
 
-Ejemplo para un grupo conformado por "JuanOrtiz" y "MaríaGodoy":  
+Ejemplo para un grupo conformado por "JuanOrtiz" y "MaríaGodoy", que trabajan en detección de frutas maduras:  
 
 ```bash
 📂 Classic_Computer_Vision/
-│── 📁 JuanOrtiz_MariaGodoy/         # Carpeta del grupo
+│── 📁 DetecciónMaduración_JuanOrtiz_MariaGodoy/         # Carpeta del grupo
 │   │── 📁 imagenes/       # Carpeta con las imágenes usadas
 │   │── 📂 src/            # Código en Python
 │   │── 📜 video.mpeg     # Explicación breve del proceso y resultados
-│   │── 📜 README.md       # Explicación breve de su implementación con los resultados
+│   │── 📜 README.md       # Explicación según los parámetros del taller
 │── 📁 OtroGrupo/          # Otra entrega de un equipo distinto
 │── 📜 README.md           # Archivo principal del repositorio
 ```
