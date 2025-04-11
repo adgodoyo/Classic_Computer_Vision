@@ -33,17 +33,17 @@ El pipeline no solo permitió mejorar la calidad de los datos visuales, sino tam
 | Modelo               | Accuracy | Precision | Recall | F1-Score |
 |----------------------|----------|-----------|--------|----------|
 | **Logistic Regression (logreg)** | 0.84     | 0.84      | 0.84   | 0.84     |
-| **Gradient Boosting (gb)**       | 0.93     | 0.93      | 0.93   | 0.93     |
-| **Naive Bayes (nb)**             | 0.70     | 0.75      | 0.70   | 0.68     |
-| **Multi-layer Perceptron (mlp)** | 0.95     | 0.95      | 0.95   | 0.95     |
-| **Extra Trees (et)**             | 0.89     | 0.89      | 0.89   | 0.89     |
+| **Gradient Boosting (gb)**       | 0.99     | 0.99      | 0.99   | 0.99     |
+| **Naive Bayes (nb)**             | 0.70     | 0.75      | 0.70   | 0.69     |
+| **Multi-layer Perceptron (mlp)** | 0.99     | 0.99      | 0.99   | 0.99     |
+| **Extra Trees (et)**             | 0.98     | 0.98      | 0.98   | 0.98     |
 
 ### Discusión
 
-- El **MLP** obtuvo el mejor rendimiento global (95% accuracy), demostrando gran capacidad de generalización.
-- **Gradient Boosting** fue también altamente efectivo (93% accuracy).
-- **Naive Bayes**, en cambio, mostró limitaciones claras, especialmente en el recall de la clase positiva.
-- El modelo **Extra Trees** demostró buena robustez sin necesidad de una arquitectura tan compleja.
+- El **MLP** y el **gb** obtuvieron el mejor rendimiento global (99% 
+accuracy), sin embargo, el mejor modelo usando el área bajo la curva fue
+ **et**.
+- **Naive Bayes** y **logreg**, en cambio, mostraron limitaciones claras, especialmente **nb** que fue el peor modelo por bastante.
 
 Estos resultados reflejan que el preprocesamiento aplicado (aumento, filtros, características locales) ayudó a enriquecer la información útil para la tarea de clasificación.
 
@@ -54,7 +54,6 @@ Estos resultados reflejan que el preprocesamiento aplicado (aumento, filtros, ca
 - **Dataset**: [Tomato Leaf Disease Detection (Kaggle)](https://www.kaggle.com/datasets/kaustubhb999/tomatoleaf)
 - **Librerías principales**:
   - `OpenCV`
-  - `imgaug`
   - `scikit-learn`
   - `matplotlib`
   - `numpy`
