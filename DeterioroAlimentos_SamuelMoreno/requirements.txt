@@ -1,6 +1,6 @@
-cv2
-glob
+glob2
 joblib
 matplotlib
 numpy
-sklearn
+opencv-python
+scikit-learn
