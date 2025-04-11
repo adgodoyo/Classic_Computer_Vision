@@ -26,7 +26,7 @@ La detección automatizada de moho y deterioro en frutas mediante visión por co
 
 ### 3. Clasificación Supervisada
 
-- **Modelos:** (Los 5 que usaste jajaja)
+- **Modelos:** KNN, Random Forest, Logistic Regression, Support Vector Machine y Gradient Boosting.
 - **Optimización:** Grid Search para ajuste de hiperparámetros.
 - **Evaluación:** Métricas como precisión y recall.
 
@@ -68,8 +68,50 @@ def extract_sift_features_from_images(image_list):
    - Generación de histogramas
    - Clasificación con SVM y Random Forest
 
-5. **Acá va lo tuyo**
+5. **Clasificación utilizando Pipeline, GridCV de Scikit-learn**
+   - StandardScaler: Normaliza los histogramas BoVW para mejorar el rendimiento de los clasificadores sensibles a la escala.
+   - *Pipeline* de Scikit-Learn: Se integraron pasos de preprocesamiento y clasificación para asegurar una validación cruzada coherente.
+   - Se evaluaron cinco modelos de clasificación con *GridSearchCV* (validación cruzada con cv=3):
+  
+| Modelo               | Accuracy en Validación |
+|----------------------|------------------------|
+| K-Nearest Neighbors  | 0.8333                 |
+| Random Forest        | 0.8000                 |
+| Logistic Regression  | 0.8000                 |
+| Support Vector Machine (SVM) | 0.7750         |
+| Gradient Boosting    | 0.7750                 |
+
+### Resultados del Mejor Modelo: K-Nearest Neighbors (KNN)
+
+**Accuracy en validación:** 0.8333  
+**Accuracy en test:** 0.8667
+
+#### Classification Report
+
+| Clase   | Precisión | Recall | F1-Score | Soporte |
+|---------|-----------|--------|----------|---------|
+| Fresh   | 0.81      | 0.97   | 0.88     | 30      |
+| Rotten  | 0.96      | 0.77   | 0.85     | 30      |
+| **Accuracy total**       |        |        | **0.87**     | **60**    |
+| Macro avg | 0.88      | 0.87   | 0.87     | 60      |
+| Weighted avg | 0.88   | 0.87   | 0.87     | 60      |
+
+#### Matriz de Confusión
+
+|               | Predicho Fresh | Predicho Rotten |
+|---------------|----------------|-----------------|
+| Actual Fresh  | 29             | 1               |
+| Actual Rotten | 7              | 23              |
+
+#### Análisis
+
+El modelo KNN ha demostrado ser el más eficaz en validación y prueba, alcanzando un **accuracy del 86.67% en el conjunto de test**. La clase *Fresh* fue identificada con alta recall (0.97), lo que indica que el modelo detecta casi todos los casos verdaderos de fruta fresca. En contraste, la clase *Rotten* tiene una precisión notable (0.96), lo que significa que la mayoría de las predicciones de fruta podrida fueron correctas, aunque su recall (0.77) es más bajo, indicando algunos falsos negativos.
+
+La matriz de confusión confirma este comportamiento: se clasificó correctamente la mayoría de los ejemplos, aunque 7 frutas podridas fueron clasificadas erróneamente como frescas. Aun así, el balance general entre precisión y recall sugiere que KNN es un modelo robusto para este problema.
+
 
 ## Conclusión
-
 El sistema propuesto demuestra ser eficaz en la identificación de frutas deterioradas mediante técnicas de visión por computadora. La combinación de SIFT y BoVW permite representar de forma robusta las características de deterioro, y los clasificadores supervisados logran buenos resultados. Este enfoque puede extenderse a otros alimentos o defectos visuales.
+
+### Posibles mejoras
+Sería recomendable **aumentar el recall de la clase "podrida"**, especialmente en contextos donde detectar productos en mal estado sea crítico. También sería bueno correr el modelo con una base de datos más grande. De modo que se pueda visualizar el funcionamiento en un conjunto de datos más robusto.
